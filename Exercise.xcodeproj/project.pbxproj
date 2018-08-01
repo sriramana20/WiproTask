@@ -19,6 +19,7 @@
 		E80365882111782C00FB2D6E /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80365872111782C00FB2D6E /* ServiceManager.swift */; };
 		E803658A211178CE00FB2D6E /* CustomInfoTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8036589211178CE00FB2D6E /* CustomInfoTableCell.swift */; };
 		E803658C2111790200FB2D6E /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E803658B2111790200FB2D6E /* Utility.swift */; };
+		E80365952111B24B00FB2D6E /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80365942111B24B00FB2D6E /* ProgressView.swift */; };
 		F7DB5ACCEA2E3A0D09F00CC5 /* Pods_Exercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7B4CF3122375110D1CF8FC /* Pods_Exercise.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		E80365872111782C00FB2D6E /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		E8036589211178CE00FB2D6E /* CustomInfoTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInfoTableCell.swift; sourceTree = "<group>"; };
 		E803658B2111790200FB2D6E /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		E80365942111B24B00FB2D6E /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				E803658B2111790200FB2D6E /* Utility.swift */,
+				E80365942111B24B00FB2D6E /* ProgressView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				E8036584211177D100FB2D6E /* ItemsModel.swift in Sources */,
 				E8036554211172B800FB2D6E /* AppDelegate.swift in Sources */,
 				E80365882111782C00FB2D6E /* ServiceManager.swift in Sources */,
+				E80365952111B24B00FB2D6E /* ProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
