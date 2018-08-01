@@ -16,6 +16,7 @@
 		E8036582211177B100FB2D6E /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8036581211177B100FB2D6E /* BaseModel.swift */; };
 		E8036584211177D100FB2D6E /* ItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8036583211177D100FB2D6E /* ItemsModel.swift */; };
 		E8036586211177E400FB2D6E /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8036585211177E400FB2D6E /* DataModel.swift */; };
+		E80365882111782C00FB2D6E /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80365872111782C00FB2D6E /* ServiceManager.swift */; };
 		F7DB5ACCEA2E3A0D09F00CC5 /* Pods_Exercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7B4CF3122375110D1CF8FC /* Pods_Exercise.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		E8036581211177B100FB2D6E /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		E8036583211177D100FB2D6E /* ItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsModel.swift; sourceTree = "<group>"; };
 		E8036585211177E400FB2D6E /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		E80365872111782C00FB2D6E /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				E8036581211177B100FB2D6E /* BaseModel.swift */,
 				E8036583211177D100FB2D6E /* ItemsModel.swift */,
 				E8036585211177E400FB2D6E /* DataModel.swift */,
+				E80365872111782C00FB2D6E /* ServiceManager.swift */,
 			);
 			path = Exercise;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				E8036556211172B800FB2D6E /* ViewController.swift in Sources */,
 				E8036584211177D100FB2D6E /* ItemsModel.swift in Sources */,
 				E8036554211172B800FB2D6E /* AppDelegate.swift in Sources */,
+				E80365882111782C00FB2D6E /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
