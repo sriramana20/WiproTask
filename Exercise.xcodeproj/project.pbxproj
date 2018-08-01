@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E8036554211172B800FB2D6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8036553211172B800FB2D6E /* AppDelegate.swift */; };
-		E8036556211172B800FB2D6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8036555211172B800FB2D6E /* ViewController.swift */; };
+		E8036556211172B800FB2D6E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8036555211172B800FB2D6E /* MainViewController.swift */; };
 		E803655B211172B800FB2D6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E803655A211172B800FB2D6E /* Assets.xcassets */; };
 		E803655E211172B800FB2D6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E803655C211172B800FB2D6E /* LaunchScreen.storyboard */; };
 		E8036569211172B900FB2D6E /* ExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8036568211172B900FB2D6E /* ExerciseTests.swift */; };
@@ -17,6 +17,8 @@
 		E8036584211177D100FB2D6E /* ItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8036583211177D100FB2D6E /* ItemsModel.swift */; };
 		E8036586211177E400FB2D6E /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8036585211177E400FB2D6E /* DataModel.swift */; };
 		E80365882111782C00FB2D6E /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80365872111782C00FB2D6E /* ServiceManager.swift */; };
+		E803658A211178CE00FB2D6E /* CustomInfoTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8036589211178CE00FB2D6E /* CustomInfoTableCell.swift */; };
+		E803658C2111790200FB2D6E /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E803658B2111790200FB2D6E /* Utility.swift */; };
 		F7DB5ACCEA2E3A0D09F00CC5 /* Pods_Exercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7B4CF3122375110D1CF8FC /* Pods_Exercise.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +45,7 @@
 		E49ED9D47B78C91688AB97C8 /* Pods-Exercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Exercise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Exercise/Pods-Exercise.debug.xcconfig"; sourceTree = "<group>"; };
 		E8036550211172B800FB2D6E /* Exercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8036553211172B800FB2D6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E8036555211172B800FB2D6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E8036555211172B800FB2D6E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E803655A211172B800FB2D6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E803655D211172B800FB2D6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E803655F211172B800FB2D6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +59,8 @@
 		E8036583211177D100FB2D6E /* ItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsModel.swift; sourceTree = "<group>"; };
 		E8036585211177E400FB2D6E /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		E80365872111782C00FB2D6E /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		E8036589211178CE00FB2D6E /* CustomInfoTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInfoTableCell.swift; sourceTree = "<group>"; };
+		E803658B2111790200FB2D6E /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,14 +132,14 @@
 			isa = PBXGroup;
 			children = (
 				E8036553211172B800FB2D6E /* AppDelegate.swift */,
-				E8036555211172B800FB2D6E /* ViewController.swift */,
+				E80365912111809600FB2D6E /* Controllers */,
 				E803655A211172B800FB2D6E /* Assets.xcassets */,
 				E803655C211172B800FB2D6E /* LaunchScreen.storyboard */,
 				E803655F211172B800FB2D6E /* Info.plist */,
-				E8036581211177B100FB2D6E /* BaseModel.swift */,
-				E8036583211177D100FB2D6E /* ItemsModel.swift */,
-				E8036585211177E400FB2D6E /* DataModel.swift */,
-				E80365872111782C00FB2D6E /* ServiceManager.swift */,
+				E803658D2111806F00FB2D6E /* Models */,
+				E803658E2111807900FB2D6E /* WebService */,
+				E80365902111808F00FB2D6E /* Views */,
+				E803658F2111808500FB2D6E /* Utilities */,
 			);
 			path = Exercise;
 			sourceTree = "<group>";
@@ -156,6 +160,48 @@
 				E8036575211172B900FB2D6E /* Info.plist */,
 			);
 			path = ExerciseUITests;
+			sourceTree = "<group>";
+		};
+		E803658D2111806F00FB2D6E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E8036581211177B100FB2D6E /* BaseModel.swift */,
+				E8036583211177D100FB2D6E /* ItemsModel.swift */,
+				E8036585211177E400FB2D6E /* DataModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E803658E2111807900FB2D6E /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				E80365872111782C00FB2D6E /* ServiceManager.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		E803658F2111808500FB2D6E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E803658B2111790200FB2D6E /* Utility.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E80365902111808F00FB2D6E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E8036589211178CE00FB2D6E /* CustomInfoTableCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E80365912111809600FB2D6E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E8036555211172B800FB2D6E /* MainViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,7 +390,9 @@
 			files = (
 				E8036586211177E400FB2D6E /* DataModel.swift in Sources */,
 				E8036582211177B100FB2D6E /* BaseModel.swift in Sources */,
-				E8036556211172B800FB2D6E /* ViewController.swift in Sources */,
+				E8036556211172B800FB2D6E /* MainViewController.swift in Sources */,
+				E803658A211178CE00FB2D6E /* CustomInfoTableCell.swift in Sources */,
+				E803658C2111790200FB2D6E /* Utility.swift in Sources */,
 				E8036584211177D100FB2D6E /* ItemsModel.swift in Sources */,
 				E8036554211172B800FB2D6E /* AppDelegate.swift in Sources */,
 				E80365882111782C00FB2D6E /* ServiceManager.swift in Sources */,
@@ -509,6 +557,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ANYQLNC27Z;
 				INFOPLIST_FILE = Exercise/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Exercise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -525,6 +574,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ANYQLNC27Z;
 				INFOPLIST_FILE = Exercise/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Exercise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
