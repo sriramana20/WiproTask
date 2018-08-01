@@ -13,6 +13,9 @@
 		E803655E211172B800FB2D6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E803655C211172B800FB2D6E /* LaunchScreen.storyboard */; };
 		E8036569211172B900FB2D6E /* ExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8036568211172B900FB2D6E /* ExerciseTests.swift */; };
 		E8036574211172B900FB2D6E /* ExerciseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8036573211172B900FB2D6E /* ExerciseUITests.swift */; };
+		E8036582211177B100FB2D6E /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8036581211177B100FB2D6E /* BaseModel.swift */; };
+		E8036584211177D100FB2D6E /* ItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8036583211177D100FB2D6E /* ItemsModel.swift */; };
+		E8036586211177E400FB2D6E /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8036585211177E400FB2D6E /* DataModel.swift */; };
 		F7DB5ACCEA2E3A0D09F00CC5 /* Pods_Exercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7B4CF3122375110D1CF8FC /* Pods_Exercise.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +52,9 @@
 		E803656F211172B900FB2D6E /* ExerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExerciseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8036573211172B900FB2D6E /* ExerciseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseUITests.swift; sourceTree = "<group>"; };
 		E8036575211172B900FB2D6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8036581211177B100FB2D6E /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		E8036583211177D100FB2D6E /* ItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsModel.swift; sourceTree = "<group>"; };
+		E8036585211177E400FB2D6E /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +130,9 @@
 				E803655A211172B800FB2D6E /* Assets.xcassets */,
 				E803655C211172B800FB2D6E /* LaunchScreen.storyboard */,
 				E803655F211172B800FB2D6E /* Info.plist */,
+				E8036581211177B100FB2D6E /* BaseModel.swift */,
+				E8036583211177D100FB2D6E /* ItemsModel.swift */,
+				E8036585211177E400FB2D6E /* DataModel.swift */,
 			);
 			path = Exercise;
 			sourceTree = "<group>";
@@ -330,7 +339,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8036586211177E400FB2D6E /* DataModel.swift in Sources */,
+				E8036582211177B100FB2D6E /* BaseModel.swift in Sources */,
 				E8036556211172B800FB2D6E /* ViewController.swift in Sources */,
+				E8036584211177D100FB2D6E /* ItemsModel.swift in Sources */,
 				E8036554211172B800FB2D6E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
