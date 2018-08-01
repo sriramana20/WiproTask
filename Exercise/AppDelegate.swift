@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.makeKeyAndVisible()
         let rootControoler = ViewController()
-        window?.rootViewController = rootControoler
-        
+        let navController = UINavigationController(rootViewController: rootControoler)
+        window?.rootViewController = navController
         return true
     }
 
