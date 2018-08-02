@@ -19,6 +19,7 @@ class MainViewController: UITableViewController {
     let serviceManager = ServiceManager.sharedInstance
     let delegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     let progressIndicator = ProgressView(text: "Loading")
+    let internetAlertMsg = "The Internet connection appears to be offline."
 
     /*
      refresh control to refresh the data in the tableview
@@ -37,9 +38,8 @@ class MainViewController: UITableViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-        
         self.setupTableView()
-        self.getJSONFeed()
+        self.callService()
     }
     
     /*
@@ -54,6 +54,13 @@ class MainViewController: UITableViewController {
 
         self.navigationController?.navigationBar.barTintColor = UIColor(red:61/255.0, green: 197/255.0, blue: 222/255.0, alpha:1)
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 16.0)]
+    }
+    func callService(){
+        if NetworkManager.sharedInstance.checkNetworkConnectivity(){
+            self.getJSONFeed()
+        }else{
+            self.showErrorAlert(alert: internetAlertMsg)
+        }
     }
     /*
      REST API call to fetch the data and processing it to display
@@ -137,7 +144,7 @@ extension MainViewController{
      refresh control handler
      */
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
-        self.getJSONFeed()
+        self.callService()
     }
 
 }

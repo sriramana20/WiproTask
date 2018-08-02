@@ -10,8 +10,7 @@ target 'Exercise' do
 pod 'ObjectMapper'
 pod 'SwiftyJSON', '~> 4.0.0-alpha.1'
 pod 'AlamofireImage', '~> 3.1'
-
-
+pod 'ReachabilitySwift', '~> 3'
 end
 
 

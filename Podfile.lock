@@ -3,19 +3,22 @@ PODS:
   - AlamofireImage (3.3.0):
     - Alamofire (~> 4.5)
   - ObjectMapper (3.1.0)
+  - ReachabilitySwift (3)
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - AlamofireImage (~> 3.1)
   - ObjectMapper
+  - ReachabilitySwift (~> 3)
   - SwiftyJSON (~> 4.0.0-alpha.1)
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 3924507f80aec4c6fba157af3f3fa07ef51f74e0
+PODFILE CHECKSUM: 111655a9431367f59b46222530bf43ff71a18271
 
 COCOAPODS: 1.2.1
