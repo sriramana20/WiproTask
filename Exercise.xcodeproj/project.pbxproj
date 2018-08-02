@@ -21,6 +21,7 @@
 		E803658C2111790200FB2D6E /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E803658B2111790200FB2D6E /* Utility.swift */; };
 		E80365952111B24B00FB2D6E /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80365942111B24B00FB2D6E /* ProgressView.swift */; };
 		E80365972113135100FB2D6E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80365962113135100FB2D6E /* NetworkManager.swift */; };
+		E8036599211320FE00FB2D6E /* HomeFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8036598211320FE00FB2D6E /* HomeFeedViewModel.swift */; };
 		F7DB5ACCEA2E3A0D09F00CC5 /* Pods_Exercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7B4CF3122375110D1CF8FC /* Pods_Exercise.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		E803658B2111790200FB2D6E /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		E80365942111B24B00FB2D6E /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		E80365962113135100FB2D6E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E8036598211320FE00FB2D6E /* HomeFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeedViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				E8036589211178CE00FB2D6E /* CustomInfoTableCell.swift */,
+				E8036598211320FE00FB2D6E /* HomeFeedViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				E8036584211177D100FB2D6E /* ItemsModel.swift in Sources */,
 				E8036554211172B800FB2D6E /* AppDelegate.swift in Sources */,
 				E80365882111782C00FB2D6E /* ServiceManager.swift in Sources */,
+				E8036599211320FE00FB2D6E /* HomeFeedViewModel.swift in Sources */,
 				E80365972113135100FB2D6E /* NetworkManager.swift in Sources */,
 				E80365952111B24B00FB2D6E /* ProgressView.swift in Sources */,
 			);

@@ -16,10 +16,10 @@ class MainViewController: UITableViewController {
     let cellId = "cellId"
     var dataItems : [DataModel]  = [DataModel]()
     var baseData = ItemsModel()
-    let serviceManager = ServiceManager.sharedInstance
     let delegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
     let progressIndicator = ProgressView(text: "Loading")
     let internetAlertMsg = "The Internet connection appears to be offline."
+    var viewModelObj = HomeFeedViewModel()
 
     /*
      refresh control to refresh the data in the tableview
@@ -46,6 +46,7 @@ class MainViewController: UITableViewController {
      intialize properties of table view , register custom table cell with table view
      */
     func setupTableView(){
+        self.viewModelObj.delegate = self
         tableView.estimatedRowHeight = 200
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.register(CustomInfoTableCell.self, forCellReuseIdentifier: cellId)
@@ -59,6 +60,9 @@ class MainViewController: UITableViewController {
         if NetworkManager.sharedInstance.checkNetworkConnectivity(){
             self.getJSONFeed()
         }else{
+            if self.refreshController.isRefreshing {
+                self.refreshController.endRefreshing()
+            }
             self.showErrorAlert(alert: internetAlertMsg)
         }
     }
@@ -67,37 +71,7 @@ class MainViewController: UITableViewController {
      */
     func getJSONFeed(){
         self.showProgressIndicator()
-        self.serviceManager.getDataFromService(success: {(response) -> Void in
-            let json = JSON(response)
-            if json != JSON.null {
-                self.dataItems.removeAll()
-                for i in 0..<json["rows"].count {
-                    if let rawStr = json["rows"][i].rawString(),
-                        let obj = Mapper<DataModel>().map(JSONString: rawStr){
-                        self.dataItems.append(obj)
-                    }
-                }
-                DispatchQueue.main.async {
-                    self.hideProgressIndicator()
-                    if let title =  json["title"].string{
-                        self.title = title
-                    }
-                    self.tableView.reloadData()
-                    if self.refreshController.isRefreshing {
-                        self.refreshController.endRefreshing()
-                    }
-                }
-            } else {
-                self.hideProgressIndicator()
-                self.showErrorAlert(alert: "Oops! Something's not right.")
-            }
-        }) {(error) -> Void in
-            if let err  = error{
-                self.hideProgressIndicator()
-                print(err.localizedDescription)
-               self.showErrorAlert(alert: err.localizedDescription)
-            }
-        }
+        self.viewModelObj.getJsonFeed()
     }
     
     override func didReceiveMemoryWarning() {
@@ -146,5 +120,24 @@ extension MainViewController{
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
         self.callService()
     }
-
+}
+extension MainViewController : JsonFeedVMDelegate{
+    func errorHandling(_ error:String){
+        DispatchQueue.main.async {
+            self.hideProgressIndicator()
+            self.showErrorAlert(alert: error)
+        }
+    }
+    func getJSONFeedSuccessHandler(_ title : String, response: [DataModel]){
+        DispatchQueue.main.async {
+            self.hideProgressIndicator()
+            self.title = title
+            self.dataItems  = response
+            self.tableView.reloadData()
+            
+            if self.refreshController.isRefreshing {
+                self.refreshController.endRefreshing()
+            }
+        }
+    }
 }
