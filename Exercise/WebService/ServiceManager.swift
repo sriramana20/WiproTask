@@ -13,11 +13,10 @@ import ObjectMapper
 class ServiceManager: NSObject {
     
     static let sharedInstance: ServiceManager = { ServiceManager() }()
-    let endPoint = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts"
     
-    func getDataFromService(success: @escaping (_ response: Any) -> Void, failure: @escaping (_ error: Error?) -> Void)  {
+    func getDataFromService(url : String, success: @escaping (_ response: Any) -> Void, failure: @escaping (_ error: Error?) -> Void)  {
         
-        let request = NSMutableURLRequest(url: NSURL(string: self.endPoint)! as URL,
+        let request = NSMutableURLRequest(url: NSURL(string: url)! as URL,
                                           cachePolicy: .useProtocolCachePolicy,
                                           timeoutInterval: 10.0)
         request.httpMethod = "GET"

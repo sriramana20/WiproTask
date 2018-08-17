@@ -28,12 +28,13 @@ class HomeFeedViewModel: HomeFeedViewModeling {
     let serviceManager = ServiceManager.sharedInstance
     var dataItems : [DataModel]  = [DataModel]()
     var title : String = ""
+    let endPoint = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts"
 
     func handleError(_ error:String){
         self.delegate?.errorHandling(error)
     }
     func getJsonFeed(){
-        self.serviceManager.getDataFromService(success: {(response) -> Void in
+        self.serviceManager.getDataFromService(url : self.endPoint, success: {(response) -> Void in
             let json = JSON(response)
             if json != JSON.null {
                 self.dataItems.removeAll()
