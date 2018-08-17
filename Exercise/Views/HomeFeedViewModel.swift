@@ -43,6 +43,11 @@ class HomeFeedViewModel: HomeFeedViewModeling {
                         self.dataItems.append(obj)
                     }
                 }
+                for (index,item) in self.dataItems.enumerated(){
+                    if item.title == nil && item.descriptionValue == nil && item.imageHref == nil{
+                        self.dataItems.remove(at: index)
+                    }
+                }
                 if let title =  json["title"].string{
                     self.title = title
                 }
