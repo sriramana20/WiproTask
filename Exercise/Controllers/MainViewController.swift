@@ -20,7 +20,7 @@ class MainViewController: UITableViewController {
     let progressIndicator = ProgressView(text: "Loading")
     let internetAlertMsg = "The Internet connection appears to be offline."
     var viewModelObj = HomeFeedViewModel()
-
+    
     /*
      refresh control to refresh the data in the tableview
      */
@@ -33,7 +33,7 @@ class MainViewController: UITableViewController {
         
         return refreshControl
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,7 +52,7 @@ class MainViewController: UITableViewController {
         tableView.register(CustomInfoTableCell.self, forCellReuseIdentifier: cellId)
         tableView.tableFooterView = UIView()
         tableView.addSubview(self.refreshController)
-
+        
         self.navigationController?.navigationBar.barTintColor = UIColor(red:61/255.0, green: 197/255.0, blue: 222/255.0, alpha:1)
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 16.0)]
     }
@@ -90,7 +90,7 @@ class MainViewController: UITableViewController {
     }
 }
 extension MainViewController{
-
+    
     /*
      show the progrees view
      */
@@ -105,7 +105,7 @@ extension MainViewController{
         self.delegate.window?.isUserInteractionEnabled = true
         self.progressIndicator.removeFromSuperview()
     }
-
+    
     /*
      show the alert view with error messages
      */
@@ -123,21 +123,24 @@ extension MainViewController{
 }
 extension MainViewController : JsonFeedVMDelegate{
     func errorHandling(_ error:String){
-        DispatchQueue.main.async {
-            self.hideProgressIndicator()
-            self.showErrorAlert(alert: error)
+        DispatchQueue.main.async { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.hideProgressIndicator()
+            strongSelf.showErrorAlert(alert: error)
         }
     }
     func getJSONFeedSuccessHandler(_ title : String, response: [DataModel]){
-        DispatchQueue.main.async {
-            self.hideProgressIndicator()
-            self.title = title
-            self.dataItems  = response
-            self.tableView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.hideProgressIndicator()
+            strongSelf.title = title
+            strongSelf.dataItems  = response
+            strongSelf.tableView.reloadData()
             
-            if self.refreshController.isRefreshing {
-                self.refreshController.endRefreshing()
+            if strongSelf.refreshController.isRefreshing {
+                strongSelf.refreshController.endRefreshing()
             }
         }
     }
 }
+

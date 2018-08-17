@@ -11,7 +11,7 @@ import AlamofireImage
 import Alamofire
 
 class CustomInfoTableCell : UITableViewCell {
-
+    
     /*
      create label to dispaly title
      */
@@ -88,13 +88,14 @@ class CustomInfoTableCell : UITableViewCell {
             let priorityQ = DispatchQueue.global(qos: .userInteractive)
             priorityQ.async {
                 Alamofire.request(imgUrl).responseImage { response in
-                    DispatchQueue.main.async {
+                    DispatchQueue.main.async { [weak self] in
+                        guard let strongSelf = self else { return }
                         if let image = response.result.value {
-                            self.itemImage.image = image
-                            self.setNeedsLayout()
-                            self.setNeedsDisplay()
+                            strongSelf.itemImage.image = image
+                            strongSelf.setNeedsLayout()
+                            strongSelf.setNeedsDisplay()
                         }else{
-                            self.itemImage.image = UIImage(named: "user_placeholder")
+                            strongSelf.itemImage.image = UIImage(named: "user_placeholder")
                         }
                     }
                 }
